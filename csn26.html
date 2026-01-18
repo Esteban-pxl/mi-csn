@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Promo Especial - 10% Regalo</title>
+  <style>
+    :root{
+      --accent-a: #00f2ff;
+      --accent-b: #7000ff;
+      --gold: #ffcc00;
+      --bg-0: #05010a;
+      --bg-1: #1a0b2e;
+    }
+    html,body{ height:100%; margin:0; font-family: "Segoe UI", sans-serif; background: radial-gradient(circle, var(--bg-1) 0%, var(--bg-0) 100%); color:#fff; }
+    main{ min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px; }
+    .card{
+      text-align:center;
+      padding:48px;
+      border-radius:20px;
+      background:rgba(0,0,0,.6);
+      border:3px solid var(--accent-a);
+      box-shadow: 0 0 30px var(--accent-a)55, inset 0 0 20px var(--accent-b)33;
+      backdrop-filter: blur(10px);
+      max-width:420px;
+      width:100%;
+    }
+    .regalo{
+      color:var(--gold);
+      font-size:3rem;
+      font-weight:900;
+      text-shadow:0 0 15px var(--gold);
+      margin:0 0 8px;
+    }
+    h2{
+      font-size:1.1rem;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      color:var(--accent-a);
+      margin:0 0 20px;
+    }
+    .actions{ display:flex; gap:14px; justify-content:center; margin-top:26px; flex-wrap:wrap; }
+    .btn{
+      display:inline-block;
+      padding:14px 22px;
+      font-size:1rem;
+      font-weight:700;
+      color:#fff;
+      text-decoration:none;
+      border-radius:999px;
+      box-shadow: 0 5px 20px rgba(0,242,255,0.25);
+      transition: transform .18s ease, box-shadow .18s ease;
+      cursor:pointer;
+    }
+    .btn:focus{ outline:3px solid rgba(255,204,0,0.18); outline-offset:4px; }
+    .btn-register{ background: linear-gradient(90deg, var(--accent-a), var(--accent-b)); }
+    .btn-whatsapp{ background: linear-gradient(90deg,#25D366,#128C7E); box-shadow:none; }
+    .btn:hover{ transform:translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.35); }
+    @media (max-width:420px){ .card{ padding:28px; } .regalo{ font-size:2.2rem; } }
+  </style>
+</head>
+<body>
+  <main>
+    <article class="card" aria-labelledby="promo-title" role="region">
+      <p class="regalo" aria-hidden="true">🎁 10% DE REGALO</p>
+      <h2 id="promo-title">¡Únete a la acción!</h2>
+      <p>Regístrate y reclama tu bono de bienvenida.</p>
+
+      <div class="actions">
+        <a href="/registro"
+           class="btn btn-register"
+           role="button"
+           aria-label="Registrar usuario en el sitio">
+          REGISTRAR USUARIO
+        </a>
+
+        <!-- Reemplaza 123456789 por el número real en formato internacional sin el '+' -->
+        <a href="https://wa.me/123456789?text=Hola%20Quiero%20registrarme%20y%20reclamar%20mi%2010%25%20de%20regalo"
+           class="btn btn-whatsapp"
+           target="_blank"
+           rel="noopener noreferrer"
+           role="button"
+           aria-label="Registrarme por WhatsApp (se abre en una pestaña nueva)">
+          REGISTRARME POR WHATSAPP
+        </a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
