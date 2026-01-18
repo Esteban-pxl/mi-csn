@@ -1,129 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Promo Especial - 10% Regalo</title>
-  <style>
-    :root{
-      --accent-a: #00f2ff;
-      --accent-b: #7000ff;
-      --gold: #ffcc00;
-      --bg-0: #05010a;
-      --bg-1: #1a0b2e;
-    }
-    html,body{ height:100%; margin:0; font-family: "Segoe UI", sans-serif; background: radial-gradient(circle, var(--bg-1) 0%, var(--bg-0) 100%); color:#fff; }
-    main{ min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px; position:relative; }
-
-    /* Decorative island SVG, positioned behind the card */
-    .island-svg{
-      position:absolute;
-      bottom:6%;
-      left:50%;
-      transform:translateX(-50%);
-      width:480px;
-      height:auto;
-      pointer-events:none;
-      opacity:0.12;
-      filter: blur(1px);
-      z-index:0;
-    }
-
-    .card{
-      position:relative; /* create stacking context */
-      z-index:1;
-      text-align:center;
-      padding:48px;
-      border-radius:20px;
-      background:rgba(0,0,0,.6);
-      border:3px solid var(--accent-a);
-      box-shadow: 0 0 30px var(--accent-a)55, inset 0 0 20px var(--accent-b)33;
-      backdrop-filter: blur(10px);
-      max-width:420px;
-      width:100%;
-    }
-    .regalo{
-      color:var(--gold);
-      font-size:3rem;
-      font-weight:900;
-      text-shadow:0 0 15px var(--gold);
-      margin:0 0 8px;
-    }
-    h2{
-      font-size:1.1rem;
-      text-transform:uppercase;
-      letter-spacing:2px;
-      color:var(--accent-a);
-      margin:0 0 20px;
-    }
-    .actions{ display:flex; gap:14px; justify-content:center; margin-top:26px; flex-wrap:wrap; }
-    .btn{
-      display:inline-block;
-      padding:14px 22px;
-      font-size:1rem;
-      font-weight:700;
-      color:#fff;
-      text-decoration:none;
-      border-radius:999px;
-      box-shadow: 0 5px 20px rgba(0,242,255,0.25);
-      transition: transform .18s ease, box-shadow .18s ease;
-      cursor:pointer;
-    }
-    .btn:focus{ outline:3px solid rgba(255,204,0,0.18); outline-offset:4px; }
-    .btn-register{ background: linear-gradient(90deg, var(--accent-a), var(--accent-b)); }
-    .btn-whatsapp{ background: linear-gradient(90deg,#25D366,#128C7E); box-shadow:none; }
-    .btn:hover{ transform:translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.35); }
-    @media (max-width:420px){ .card{ padding:28px; } .regalo{ font-size:2.2rem; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSN 26 - Modernizado</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff0080, #00c6ff);
+            animation: gradient 5s ease infinite;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .card {
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #0DFF00;
+            border-radius: 5px;
+            color: black;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background-color: #00b300;
+        }
+    </style>
 </head>
 <body>
-  <main>
-    <!-- Decorative island SVG placed behind the card -->
-    <svg class="island-svg" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-      <!-- Sky glow / sun -->
-      <defs>
-        <linearGradient id="gSun" x1="0" x2="1">
-          <stop offset="0%" stop-color="#ffd86a" />
-          <stop offset="100%" stop-color="#ff9a9e" />
-        </linearGradient>
-      </defs>
-      <circle cx="650" cy="60" r="40" fill="url(#gSun)" />
-      <!-- Island sand -->
-      <ellipse cx="400" cy="330" rx="300" ry="50" fill="#ffd89b" />
-      <!-- Small palm tree: trunk -->
-      <path d="M460 240 C465 250 470 280 460 300" stroke="#7b4f2a" stroke-width="10" stroke-linecap="round" fill="none" />
-      <!-- Palm leaves -->
-      <path d="M460 245 C500 220 540 230 570 210" stroke="#2b8a3e" stroke-width="12" stroke-linecap="round" fill="none" />
-      <path d="M460 235 C520 205 560 210 600 190" stroke="#2b8a3e" stroke-width="12" stroke-linecap="round" fill="none" />
-      <path d="M460 255 C430 230 390 240 360 220" stroke="#2b8a3e" stroke-width="12" stroke-linecap="round" fill="none" />
-      <!-- Tiny waves in front -->
-      <path d="M60 320 C120 300 180 320 240 310 C300 300 360 320 420 310 C480 300 540 320 600 310 C660 300 720 320 780 310" stroke="#7fd3ff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" />
-    </svg>
-
-    <article class="card" aria-labelledby="promo-title" role="region">
-      <p class="regalo" aria-hidden="true">🎁 10% DE REGALO</p>
-      <h2 id="promo-title">¡Únete a la acción!</h2>
-      <p>Regístrate y reclama tu bono de bienvenida.</p>
-
-      <div class="actions">
-        <!-- Both buttons now point to the same WhatsApp placeholder; update 123456789 when ready -->
-        <a href="https://wa.me/123456789?text=Hola%20Quiero%20registrarme%20y%20reclamar%20mi%2010%25%20de%20regalo"
-           class="btn btn-register"
-           role="button"
-           aria-label="Contactar por WhatsApp para registrarme">
-          REGISTRAR USUARIO
-        </a>
-
-        <a href="https://wa.me/123456789?text=Hola%20Quiero%20registrarme%20y%20reclamar%20mi%2010%25%20de%20regalo"
-           class="btn btn-whatsapp"
-           target="_blank"
-           rel="noopener noreferrer"
-           role="button"
-           aria-label="Registrarme por WhatsApp (se abre en una pestaña nueva)">
-          REGISTRARME POR WHATSAPP
-        </a>
-      </div>
-    </article>
-  </main>
+    <div class="card">
+        <h1>Bienvenido a CSN 26</h1>
+        <p>Disfruta de nuestra página modernizada.</p>
+        <a href="https://wa.me/123456789" class="button">Contactar</a>
+        <a href="https://wa.me/123456789" class="button">WhatsApp</a>
+    </div>
 </body>
 </html>
